@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #f4f4f9, #eaf3ef);
+    color: #222;
+}
+header{
+    background-color: #1b4d3e;
+    color: white;
+    padding: 25px 10px;
+    text-align: center}
+.banniere {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+}
+.titre-animé {
+    font-size: 1.8em;
+    animation: fadeColor 5s infinite alternate;
+}
+#btnTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1b4d3e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#btnTop:hover {
+    background-color: #ffd700;
+    color: #1b4d3e;
+}
+@keyframes fadeColor {
+    from { color: #ffd700; }
+    to { color: white; }
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+nav {
+    background-color: #2f6b55;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffd700;
+    color: #1b4d3e;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+main {
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+section {
+    margin-bottom: 50px;
+}
+.illustration {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    
+}
+.imgCarte {
+     width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+   
+
+    
+}
+.imgCarte:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #2f6b55;
+    color: white;
+}
+table tr:hover {
+    background-color: #e8f5e9;
+    transition: 0.3s;
+}
+footer {
+    background-color: #1b4d3e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffd700;
+    margin: 0 8px;
+    text-decoration: none;
+}
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .image-carte {
+        width: 100%;
+    }
+}
+
+
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 2000;
+}
+
+#btnTheme {
+    background: #2f6b55;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#btnTheme:hover {
+    background: #ffd700;
+    color: #1b4d3e;
+}
+
+
+body.dark-mode {
+    background: linear-gradient(to bottom right, #0d1713, #1b4d3e);
+    color: #f1f1f1;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+    background-color: #0f2f25;
+}
+
+body.dark-mode nav a {
+    color: #f1f1f1;
+}
+
+body.dark-mode nav a:hover {
+    background-color: #ffd700;
+    color: #1b4d3e;
+}
+
+body.dark-mode table th {
+    background-color: #1b4d3e;
+}
+
+body.dark-mode aside {
+    background-color: #133328;
+    border-left: 5px solid #ffd700;
+}
